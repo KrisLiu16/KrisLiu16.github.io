@@ -31,19 +31,6 @@
     }
     /* 左栏：头像、简介、外链 */
     .side { text-align: center; }
-    .photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 6px;
-      background: var(--chip);
-      border: 1px solid var(--rule);
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font: 14px sans-serif;
-      margin: 0 auto 16px;
-    }
     .side h1 { font-size: 1.5rem; margin: 0 0 4px; }
     .side .sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 14px; }
     .side ul { list-style: none; padding: 0; margin: 0; font-family: sans-serif; font-size: 0.9rem; }
@@ -75,7 +62,6 @@
 
     @media (max-width: 680px) {
       .wrap { grid-template-columns: 1fr; gap: 24px; padding: 28px 16px 48px; }
-      .photo { width: 120px; height: 120px; }
       .news li { flex-direction: column; gap: 0; }
     }
   </style>
@@ -83,7 +69,6 @@
 <body>
   <div class="wrap">
     <aside class="side">
-      <div class="photo">头像</div>
       <h1>刘志豪</h1>
       <p class="sub">软件工程师</p>
       <ul>
