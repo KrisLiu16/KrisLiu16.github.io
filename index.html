@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="刘志豪的个人主页：论文、项目与联系方式。">
+  <title>刘志豪</title>
+  <style>
+    :root {
+      --bg: #ffffff; --text: #222; --muted: #666; --link: #2a5db0; --rule: #ddd; --chip: #f1f4f9;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+      line-height: 1.75;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+    }
+    /* 左栏：头像、简介、外链 */
+    .side { text-align: center; }
+    .photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 6px;
+      background: var(--chip);
+      border: 1px solid var(--rule);
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: 14px sans-serif;
+      margin: 0 auto 16px;
+    }
+    .side h1 { font-size: 1.5rem; margin: 0 0 4px; }
+    .side .sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 14px; }
+    .side ul { list-style: none; padding: 0; margin: 0; font-family: sans-serif; font-size: 0.9rem; }
+    .side li { margin: 6px 0; }
+
+    /* 右栏：正文区块 */
+    h2 {
+      font-size: 1.15rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 4px;
+      margin: 32px 0 14px;
+    }
+    h2:first-child { margin-top: 0; }
+    .news { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; }
+    .news li { display: flex; gap: 14px; padding: 4px 0; }
+    .news time { color: var(--muted); font-family: sans-serif; font-size: 0.85rem; white-space: nowrap; }
+
+    .pub { margin-bottom: 16px; }
+    .pub .title { font-weight: bold; }
+    .pub .authors { font-size: 0.92rem; color: var(--muted); }
+    .pub .venue { font-size: 0.92rem; font-style: italic; }
+    .pub .tags { font-family: sans-serif; font-size: 0.75rem; margin-top: 4px; }
+    .pub .tags a {
+      background: var(--chip);
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-right: 4px;
+    }
+
+    @media (max-width: 680px) {
+      .wrap { grid-template-columns: 1fr; gap: 24px; padding: 28px 16px 48px; }
+      .photo { width: 120px; height: 120px; }
+      .news li { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="side">
+      <div class="photo">头像</div>
+      <h1>刘志豪</h1>
+      <p class="sub">软件工程师</p>
+      <ul>
+        <li><a href="https://github.com/KrisLiu16">GitHub</a></li>
+        <li><a href="#">Google Scholar</a></li>
+        <li><a href="#">CV</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section>
+        <h2>简介</h2>
+        <p>这里写两三段个人简介：研究或工作方向、正在做的事、对什么问题感兴趣。</p>
+      </section>
+
+      <section>
+        <h2>最新动态</h2>
+        <ul class="news">
+          <li><time>2026-10</time><span>示例：一篇论文被会议接收。</span></li>
+          <li><time>2026-06</time><span>示例：在某次分享会上做了演讲。</span></li>
+          <li><time>2026-02</time><span>示例：开源项目发布 v1.0。</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>代表作品</h2>
+        <div class="pub">
+          <div class="title">论文或项目标题示例：一个面向某问题的方法</div>
+          <div class="authors"><strong>刘志豪</strong>, 合作者 A, 合作者 B</div>
+          <div class="venue">Conference Name, 2026</div>
+          <div class="tags"><a href="#">PDF</a><a href="#">Code</a><a href="#">Slides</a></div>
+        </div>
+        <div class="pub">
+          <div class="title">第二个作品标题示例</div>
+          <div class="authors">合作者 A, <strong>刘志豪</strong></div>
+          <div class="venue">Journal Name, 2025</div>
+          <div class="tags"><a href="#">PDF</a><a href="#">Code</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
